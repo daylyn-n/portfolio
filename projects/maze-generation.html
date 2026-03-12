@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Generation — Daylyn Nguyen</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../projects.html">← Back to Projects</a>
+  </nav>
+
+  <main class="project-detail">
+    <h1>Maze Generation</h1>
+    <p class="subtitle">Recursive backtracking algorithm to generate mazes</p>
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      A maze generator using the recursive backtracking algorithm.
+      The program creates randomized perfect mazes (mazes with exactly
+      one path between any two points) and visualizes the generation
+      process step-by-step.
+    </p>
+
+    <h2>Technologies</h2>
+    <ul>
+      <li>C++</li>
+      <li>SDL2 (visualization)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Algorithm</h2>
+    <p>
+      Recursive backtracking works by:
+    </p>
+    <ul>
+      <li>Starting from a random cell</li>
+      <li>Randomly choosing an unvisited neighbor</li>
+      <li>Removing the wall between current and chosen cell</li>
+      <li>Recursively repeating until no unvisited neighbors remain</li>
+      <li>Backtracking to find cells with unvisited neighbors</li>
+    </ul>
+    <p>
+      This creates mazes with long, winding corridors and a natural
+      organic appearance.
+    </p>
+
+    <hr>
+
+    <h2>Technical Challenges</h2>
+    <ul>
+      <li>Managing stack depth for large mazes (converted to iterative with explicit stack)</li>
+      <li>Efficient grid representation for wall states</li>
+      <li>Smooth animation of the generation process</li>
+    </ul>
+
+    <hr>
+
+    <h2>Possible Extensions</h2>
+    <ul>
+      <li>Implement other algorithms (Prim's, Kruskal's, Eller's)</li>
+      <li>Add maze solving visualization (A*, BFS)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Lessons Learned</h2>
+    <ul>
+      <li>Actually using DFS to make something cool</li>
+    </ul>
+
+    <hr>
+
+    <h2>Demo</h2>
+    <p>
+      <video controls width="100%">
+        <source src="../assets/maze/maze-demo.mp4" type="video/mp4">
+      </video>
+    </p>
+
+    <hr>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/daylyn-n/maze-gen">GitHub</a>
+    </p>
+
+    <hr>
+
+    <p><a href="../projects.html">← Back to Projects</a></p>
+  </main>
+</body>
+</html>

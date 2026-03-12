@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particle Simulator — Daylyn Nguyen</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../projects.html">← Back to Projects</a>
+  </nav>
+
+  <main class="project-detail">
+    <h1>Particle Simulator</h1>
+    <p class="subtitle">CPU rendering of particles using SDL2</p>
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      A real-time particle simulation rendered entirely on the CPU using SDL2.
+      The system handles thousands of particles with basic physics interactions
+      including gravity, and collision detection.
+    </p>
+
+    <h2>Technologies</h2>
+    <ul>
+      <li>C++</li>
+      <li>SDL2</li>
+      <li>Valgrind / KCachegrind (profiling)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Architecture</h2>
+    <p>
+      The simulator uses a simple entity-based design where each particle stores
+      position, velocity, and lifetime. The main loop handles physics updates
+      and rendering in separate passes to maintain consistent frame timing.
+    </p>
+
+    <hr>
+
+    <h2>Technical Challenges</h2>
+    <ul>
+      <li>Optimizing particle updates for CPU cache efficiency</li>
+      <li>Balancing visual fidelity with frame rate at high particle counts</li>
+      <li>Implementing efficient collision detection without spatial partitioning</li>
+    </ul>
+
+    <hr>
+
+    <h2>Visuals</h2>
+    <p>
+      <video controls width="100%">
+        <source src="../assets/particle-sim/particle-demo.mp4" type="video/mp4">
+      </video>
+    </p>
+
+    <p>Profiling before optimization:</p>
+    <p><img src="../assets/particle-sim/before.png" alt="KCachegrind before optimization"></p>
+
+    <p>Profiling after optimization:</p>
+    <p><img src="../assets/particle-sim/after.png" alt="KCachegrind after optimization"></p>
+
+    <hr>
+
+    <h2>Lessons Learned</h2>
+    <ul>
+      <li>Profiling with Valgrind/KCachegrind is useful for finding bottlenecks</li>
+    </ul>
+
+    <hr>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/daylyn-n/particle-simulator">GitHub</a> ·
+    </p>
+
+    <hr>
+
+    <p><a href="../projects.html">← Back to Projects</a></p>
+  </main>
+</body>
+</html>
