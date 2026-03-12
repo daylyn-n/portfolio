@@ -1,1 +1,1 @@
-[site](daylyn.ca)
+daylyn.ca
