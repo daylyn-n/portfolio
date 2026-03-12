@@ -87,6 +87,7 @@ p {
 
 .project-title {
   color: #d4d4d4;
+  text-decoration: underline;
 }
 
 .project-desc {
