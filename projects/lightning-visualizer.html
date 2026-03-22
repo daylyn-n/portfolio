@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightning Visualizer — Daylyn Nguyen</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="back-nav">
+    <a href="../projects.html">← Back to Projects</a>
+  </nav>
+
+  <main class="project-detail">
+    <h1>Lightning Visualizer</h1>
+    <p class="subtitle">Real time lightning visualizer utilizer websockets, openGL and C++</p>
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+        Gather lightning data using websockets to render global lightning strikes in real time;
+        Rendered in C++ and OpenGL, I created a GPU powered visualizer. I think this project makes a 
+        good base for future OpenGL projects I'll be making in the future.
+    </p>
+
+    <h2>Technologies</h2>
+    <ul>
+      <li>C++</li>
+      <li>OpenGL 4.1</li>
+      <li>ixwebsockets</li>
+    </ul>
+
+    <hr>
+
+    <h2>Architecture</h2>
+    <p>
+        Using object oriented design, create scalable and readable code to render and load textures independently,
+        gather live data with websockets, and a class for Camera to change the view of the plane. With a main loop
+        to call for the seperate methods to load the map and render the lightning strikes.
+    </p>
+
+    <hr>
+
+    <h2>Technical Challenges</h2>
+    <ul>
+      <li>Gathering and parsing the websocket data into a json while also trying to not run into race conditions</li>
+      <li>Being able to recognize that I don't need to reinvent the wheel and utilize third party libraries for my needs</li>
+    </ul>
+
+    <hr>
+
+    <h2>Visuals</h2>
+    <p>
+      <video controls width="100%">
+        <source src="../assets/lightning/lightning.mp4" type="video/mp4">
+      </video>
+    </p>
+
+    <hr>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/daylyn-n/real-time-lightning-visualization">GitHub</a> ·
+    </p>
+
+    <hr>
+
+    <p><a href="../projects.html">← Back to Projects</a></p>
+  </main>
+</body>
+</html>
